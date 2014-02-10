@@ -14,18 +14,50 @@
     
 	<link href="styles/lists.css" rel="stylesheet" type="text/css">
 	<link href="styles/headers.css" rel="stylesheet" type="text/css">
+	<link href="styles/transitions.css" rel="stylesheet" type="text/css">
 	<link href="fonts.css" rel="stylesheet" type="text/css">
 	
 	<!-- Below is your custom application stylesheet -->
 	
 	<link href="styles/app.css" rel="stylesheet" type="text/css">
-	
+	<style type="text/css">
+	    [data-position="right"] {
+	      position: absolute;
+	      top: 0;
+	      left: 0;
+	      right: 0;
+	      bottom: 0;
+	      transform: translateX(100%);
+	      -webkit-transform: translateX(100%);
+	      z-index: 15;
+	      z-index: 100; /* -> drawer */
+	    }
+	    section[role="region"][data-position="right"] {
+	      position: absolute;
+	    }
+	    [data-position="right"].current {
+	      animation: rightToCurrent 0.4s forwards;
+	      -webkit-animation: rightToCurrent 0.4s forwards;
+	    }
+	    [data-position="right"].right {
+	      animation: currentToRight 0.4s forwards;
+	      -webkit-animation: currentToRight 0.4s forwards;
+	    }
+	    [data-position="current"].left {
+	      animation: currentToLeft 0.4s forwards;
+	      -webkit-animation: currentToLeft 0.4s forwards;
+	    }
+	    [data-position="current"].current {
+	      animation: leftToCurrent 0.4s forwards;
+	      -webkit-animation: leftToCurrent 0.4s forwards;
+	    }
+    </style>
 </head>
-<body role="application" class="skin-dark">
+<body role="application">
 
 
 <!-- Home page -->
-	<section role="region">
+	<section role="region"  data-position="current" class="skin-dark">
 			<header>
 				<h1>Outdoor Map</h1>
 			</header>
@@ -61,13 +93,13 @@
 	</section>
 
 <!-- The Map -->
-	<section role="region">
+	<section role="region" id="map_page" data-position="right" class="skin-dark">
 	    <header class="fixed">
 	    	<a id="btn-map-back" href="#"><span class="icon icon-back">retour</span></a>
 	    	<h1>La Carte</h1>
 	    </header>
-
 	</section>
 
+  <script type="text/javascript" defer src="scripts/js/app.js"></script>
 </body>
 </html>
