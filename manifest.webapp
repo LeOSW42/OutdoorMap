@@ -1,0 +1,24 @@
+{
+  "version": "0.1",
+  "name": "Outdoor Map",
+  "description": "A simple OSM based map to plan outdoor sports",
+  "launch_path": "/index.html",
+  "icons": {
+    "16": "/app-icons/icon-16.png",
+    "48": "/app-icons/icon-48.png",
+    "128": "/app-icons/icon-128.png"
+  },
+  "developer": {
+    "name": "Léo Serre",
+    "url": "http://leo-serre.legtux.org"
+  },
+  "locales": {
+    "fr": {
+      "description": "Une application basée sur OSM pour préparer vos sorties en plein air",
+      "developer": {
+        "url": "http://leo-serre.legtux.org"
+      }
+    }
+  },
+  "default_locale": "fr"
+}
