@@ -37,3 +37,13 @@ document.querySelector('#btn-license-back').addEventListener ('click', function 
   document.querySelector('#license_page').className = 'right skin-dark';
   document.querySelector('[data-position="current"]').className = 'current skin-dark';
 });
+
+        var map = L.map('map', {
+                center: new L.LatLng(51.46, -0.205),
+      zoom: 15
+        });
+
+        L.tileLayer('http://{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png', {
+          attribution: 'Map data &copy; OpenStreetMap contributors',
+          maxZoom: 18
+        }).addTo(map);
