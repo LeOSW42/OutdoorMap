@@ -14,7 +14,51 @@ section[role="region"] > [data-type="list"] li > a {
     margin: 0px 1.5rem;
 }
 
-/* Tabs */
-[role="tablist"] [role="tabpanel"] {
-  padding: 1.5rem 3rem;
+.scrollable {
+  overflow: scroll;
+  height: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  position: relative;
+}
+
+.content > :not(header){
+	padding: 0.5rem 3rem;
+}
+
+/* Fonts */
+h1 { /* Main header */
+  font-size: 2.5rem;
+  font-weight: normal;
+}
+
+h2 { /* Subheader, Dialog title */
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+
+h3 { /* Subheader, Dialog title */
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+h4 { /* Subheader, Dialog title */
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 2.5rem;
+}
+
+ul, ol, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 1.9rem;
+  font-weight: normal;
+  line-height: 2.5rem;
 }
